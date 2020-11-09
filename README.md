@@ -15,18 +15,19 @@ How it works:
 
 Open termux app and install required package above and follow this steps:
 
-1-git clone 
+1- git clone https://github.com/abdoxfox/ssl_Tls_injector.git
 
-2-cd ssl_Tls_injector
+2- cd ssl_Tls_injector
 
-3-python client.py
+3- python client.py
 
-4-open a new tab in termux
+4- open a new tab in termux
 
 5- delete content of sshacc.txt and remplace it by an ssh account as the following example:
-host:port@username:password
+host:port@username:password 
+the ssh account have to be with stunnel port 443
 
-5-python ssh.py
+6-python ssh.py
 
 After ssh connected the tun2tap apk will launched 
 
