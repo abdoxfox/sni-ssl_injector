@@ -25,11 +25,12 @@ Open termux app and install required package above and follow this steps:
 
 5-python ssh.py
 
-will ssh connected the tun2tap apk will launched 
+After ssh connected the tun2tap apk will launched 
 
 When it launch successfully we add this settings
 
 Server ip 127.0.0.1 
+
 Port 1080
 
 
