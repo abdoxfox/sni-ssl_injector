@@ -1,17 +1,17 @@
-# ssl_Tls_injector
-ssl/tls vpn injector 
+# sni ssl injector
 
 
-Ssl injector in python works in termux 
 
-Requirements:
+sni ssl injector in python works in termux 
+
+# Requirements:
 
 1-apt install git python openssh sshpass netcat -y
 
 2-install tun2tap app from playstore
 link: https://play.google.com/store/apps/details?id=com.newtoolsworks.tun2tap
 
-How it works:
+# How it works:
 
 Open termux app and install required package above and follow this steps:
 
