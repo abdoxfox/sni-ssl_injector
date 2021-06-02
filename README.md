@@ -21,17 +21,17 @@ Open termux app and install required package above and follow this steps:
 
 3- python client.py
 
-4- open a new tab in termux
-
-5- delete content of sshacc.txt and remplace it by an ssh account as the following example:
+4- delete content of sshacc.txt and remplace it by an ssh account as the following example:
 host:port@username:password 
 the ssh account have to be with stunnel port 443
 
-6-python ssh.py
+4- open a new tab in termux
 
-After ssh connected the tun2tap apk will launched 
+6-run the ssh script python ssh.py
 
-When it launch successfully we add this settings
+After ssh connected the tun2tap apk will launched if your device rooted else launch it manuelly!
+
+When it launch successfully, add this settings
 
 Server ip 127.0.0.1 
 
