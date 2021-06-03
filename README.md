@@ -15,7 +15,7 @@ link: https://play.google.com/store/apps/details?id=com.newtoolsworks.tun2tap
 
 Open termux app and install required package above and follow this steps:
 
-1- git clone https://github.com/abdoxfox/ssl_Tls_injector.git
+1- git clone https://github.com/abdoxfox/sni-ssl_injector.git
 
 2- cd sni-ssl_injector
 
