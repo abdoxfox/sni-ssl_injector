@@ -17,7 +17,7 @@ Open termux app and install required package above and follow this steps:
 
 1- git clone https://github.com/abdoxfox/ssl_Tls_injector.git
 
-2- cd ssl_Tls_injector
+2- cd sni-ssl_injector
 
 3- python client.py
 
