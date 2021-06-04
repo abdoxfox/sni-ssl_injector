@@ -15,8 +15,6 @@ R = bg+'\033[31m'
 def ssh_client(socks5_port,host,port,user,password):
 		try:
 			global soc , payload
-			
-			
 			dynamic_port_forwarding = '-CND {}'.format(socks5_port)
 			username = user 
 			password = password 
@@ -70,8 +68,7 @@ except ConnectionRefusedError:
 except KeyboardInterrupt:
 		print(R+'ssh stopped'+GR)
 
-			        
-
-    
-    
+			         
 soc.close()
+
+
