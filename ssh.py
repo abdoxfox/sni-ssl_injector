@@ -12,20 +12,17 @@ O = bg+'\033[33m'
 GR = bg+'\033[37m'
 R = bg+'\033[31m'
 
-def ssh_client(socks5_port,host,user,password):
+def ssh_client(socks5_port,host,port,user,password):
 		try:
 			global soc , payload
 			
 			
 			dynamic_port_forwarding = '-CND {}'.format(socks5_port)
-			host = host 
-			port = '443'
-			
 			username = user 
 			password = password 
 			inject_host= '127.0.0.1'
 			inject_port= '8980'
-			payload=f'CONNECT {host}:443 HTTP/1.0\r\n\r\n'		
+			payload=f'CONNECT {host}:{port} HTTP/1.0\r\n\r\n'		
 			soc.send(payload.encode())
 			res=soc.recv(8192)
 			print(res)
@@ -57,6 +54,7 @@ def ssh_client(socks5_port,host,user,password):
                       sys.exit(0)
 f=open('sshacc.txt','r').readline().strip('\n').split('@')
 host=f[0].split(':')[0]
+port = f[0].split(':')[1]
 user=f[1].split(':')[0]
 password=f[1].split(':')[1]
 
@@ -64,7 +62,7 @@ try:
     soc=socket.socket(socket.AF_INET,socket.SOCK_STREAM)  
     soc.connect(('127.0.0.1',8980))
     
-    thread=threading.Thread(target=ssh_client,args=('1080',host,user,password))
+    thread=threading.Thread(target=ssh_client,args=('1080',host,port,user,password))
     thread.start()
 except ConnectionRefusedError:            
     print(R+' <!> Run client.py first in a new tab\n\tthen try again'+GR)
