@@ -56,19 +56,4 @@ port = f[0].split(':')[1]
 user=f[1].split(':')[0]
 password=f[1].split(':')[1]
 
-try:    								
-    soc=socket.socket(socket.AF_INET,socket.SOCK_STREAM)  
-    soc.connect(('127.0.0.1',8980))
-    
-    thread=threading.Thread(target=ssh_client,args=('1080',host,port,user,password))
-    thread.start()
-except ConnectionRefusedError:            
-    print(R+' <!> Run client.py first in a new tab\n\tthen try again'+GR)
-      
-except KeyboardInterrupt:
-		print(R+'ssh stopped'+GR)
-
-			         
-soc.close()
-
-
+ssh_client('1080',host,port,user,password)
